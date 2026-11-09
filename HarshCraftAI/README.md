@@ -25,7 +25,7 @@ Say or type: *"get a stone pickaxe"*, *"kill the zombies"*, *"build a house"*, *
 Java executes one action for N ticks and returns the new observation (synchronous, no overshoot). Movement/look are injected once per tick in the keyboard mixin; mining/attack/place/clicks run in the end-of-tick handler (the old double application is gone). Observation = 21x10x21 voxel window + inventory + entities + container slots; `/scan` finds resource blocks within 24 blocks.
 Deterministic skills do navigation, mining, crafting, building. RL is used where tactics matter: **combat policy** (8 tactical actions) and **survival arbiter** (continue/fight/flee/eat/shelter). If a model file is missing the bot falls back to rule policies.
 
-## Honest status
+## TESTS
 - Python: 24 tests pass against the mock server (movement, jumping, digging, collecting, crafting 2x2/3x3, smelting, building walls/houses, combat, eating, drowning reflex, full "stone pickaxe" chain).
 - Java: passes a javac syntax/type check against hand-written API stubs only. It has NOT been built against real Minecraft here (no Gradle/Mojang downloads possible). Calls most likely to need a small fix on first build: `MultiPlayerGameMode.handleInventoryMouseClick/useItemOn/startDestroyBlock`, `Direction.getNearest`, `Player.pick`, `LocalPlayer.respawn`.
 - RL results are in simulators (approximate vanilla constants), not in real Minecraft. Combat sim: PPO win rate 0.98 vs rule 0.46 vs random 0.41. Survival sim (harsh): PPO return 2.04 vs rule 1.03 vs random -8.0; only 26% of episodes survive the full period. Real-world transfer is unverified.
