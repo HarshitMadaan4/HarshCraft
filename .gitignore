@@ -1,11 +1,32 @@
-   @"
-   .gradle/
-   build/
-   run/
-   .idea/
-   __pycache__/
-   *.pyc
-   .pytest_cache/
-   venv/
-   .venv/
-   "@ | Out-File -Encoding ascii .gitignore
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Java and Gradle
+.gradle/
+**/build/
+*.class
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Generated runtime data
+run/
