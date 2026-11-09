@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  S",
+    "DS ",
+    "BD "
+  ],
+  "key": {
+    "S": {
+      "item": "harshcraft:void_shard"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "id": "harshcraft:void_sword",
+    "count": 1
+  }
+}

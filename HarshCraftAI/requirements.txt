@@ -1,0 +1,14 @@
+# core bot needs nothing but the standard library + numpy
+numpy
+# RL policies (training and loading trained models)
+gymnasium
+stable-baselines3
+torch
+# tests
+pytest
+# optional voice input (pick one) and speech output
+# faster-whisper
+# sounddevice
+# SpeechRecognition
+# pyaudio
+# pyttsx3
